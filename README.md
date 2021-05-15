@@ -1,3 +1,2 @@
-# moonlight-help
-
-This Repo will fill up over time with tutorials to workaround issues i've encountered using the [moonlight](https://github.com/moonlight-stream) clients.
+# tutorials
+This repo will fill up over time with tutorials to work around issues I've encountered in my time this earth.
