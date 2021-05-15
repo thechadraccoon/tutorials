@@ -64,8 +64,8 @@ That means the server side is up and running.
   * I recommend without push to talk, minimal noise gate (so it doesn't permanently transmit)
 * When you launch it, it will ask you to which server you want to connect.
   * Click on add new.
-  * In the address field, type ```127.0.0.1```.
-  * In the username field type a name. This will be the host's name in the voice channel. ( I use ```serv``` here )
+  * In the address field, type in the host IP.
+  * In the username field type a name. This will be the host's name in the voice channel. ( I use ```client1``` etc. here )
   * In the Label field, type a nickname for it. ( mine is ```racc's comms``` )
 * Add auto-connect.
   * Click on Configure at the top of the main window.
@@ -89,8 +89,8 @@ That means the server side is up and running.
   *  Make it voice activated with a noise gate. 
 * When you launch it, it will ask you to which server you want to connect.
   * click on add new.
-  * In the address field, type ```127.0.0.1```.
-  * In the username field type a name. This will be the host's name in the voice channel. ( I use ```serv``` here. )
+  * In the address field, type in the host IP.
+  * In the username field type a name. This will be the host's name in the voice channel. ( I use ```client1``` etc. here. )
   * In the Label field, type a nickname for it. ( mine is ```racc's comms``` )
 * Add auto-connect.
   * Click on Configure at the top of the main window.
