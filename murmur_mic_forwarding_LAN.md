@@ -78,9 +78,11 @@ That means the server side is up and running.
 
 # Setup Mumble ( client )
 
+* Download VBCable from [their site](https://vb-audio.com/Cable/).
+* Install it. [[Guide](https://www.howtogeek.com/364369/how-to-record-your-pcs-audio-with-vb-cable/), Don't do the listen part.]
 * Download Mumble from [their site](https://www.mumble.info/).
 * Run the installer. But don't enable murmur.
-* Run mumble, set it up to your liking, but don't enable push to talk. Just do voice activated with noise gate. ( push to talk will be setup in-game as if you were on that pc. )
+* Run mumble, set it up so that the output is vbcable. Don't enable push to talk. Just do voice activated with noise gate. ( push to talk will be setup in-game as if you were on that pc. )
 * When you launch it will ask you to which server you wish to connect.
   * click on add new.
   * In the address field, type the IPv4 you wrote down during murmur setup. ( mine would be 192.168.1.20 )
