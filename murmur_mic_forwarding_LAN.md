@@ -1,91 +1,97 @@
-These are the actions that are required to make mumble mic forwarding a thing. 
-This is a Windows only guide sadly as vbcable is a Windows only utility.
-Altough linux and could potentially work with loop devices.
+These are the actions that are required to make Mumble mic forwarding a thing.
+
+This is a Windows only guide, sadly, as VBCable is a Windows only utility.
+
+Although Linux and Mac OS could potentially work with loop devices.
+___
 
 When I refer to the host PC, I mean the one which runs GFE / Sunshine / Open-stream.
 
 When I refer to the client PC, I mean the one which runs moonlight.
 
+## Setup Murmur ( host )
 
-## Setup murmur ( host )
-
-*  Download Mumble from [their site](https://www.mumble.info/).
+*  Download Mumble from [their site](https://www.Mumble.info/).
 
 * Run the installer.
 
-* Enable the server feature as shown with screenshot.
+* Enable the server feature as shown in the screenshots.
   
   ![installer_server_feature_off](https://user-images.githubusercontent.com/11398266/118360306-ff4c4180-b554-11eb-9cba-6974ba8f0bed.png)
   ![installer_server_feature_on](https://user-images.githubusercontent.com/11398266/118360316-0d01c700-b555-11eb-928d-29e331e27e74.png)
 
+* Launch Murmur.
 
-* Launch murmur.
-
-  ![start_menu_murmur](https://user-images.githubusercontent.com/11398266/118360334-1be87980-b555-11eb-93d8-d552d0acb226.png)
+  ![start_menu_Murmur](https://user-images.githubusercontent.com/11398266/118360334-1be87980-b555-11eb-93d8-d552d0acb226.png)
 
 * Accept firewall exception.
-  * Otherwise you won't be able to connect to it.
+  Otherwise, you won't be able to connect to it.
 
-  ![firewall_allow_murmur](https://user-images.githubusercontent.com/11398266/118360344-26a30e80-b555-11eb-88bd-2fa9fc6c87ef.png)
+  ![firewall_allow_Murmur](https://user-images.githubusercontent.com/11398266/118360344-26a30e80-b555-11eb-88bd-2fa9fc6c87ef.png)
 
 
-* Check system tray for icon.
+* Check the system tray for the icon.
 That means the server side is up and running.
 
-  ![murmur_tray_icon](https://user-images.githubusercontent.com/11398266/118360376-39b5de80-b555-11eb-96c0-40ab4f845817.png)
+  ![Murmur_tray_icon](https://user-images.githubusercontent.com/11398266/118360376-39b5de80-b555-11eb-96c0-40ab4f845817.png)
 
-* Make murmur start with PC.
-  * Go to the mumble installation folder. ( Default is C:\Program Files\Mumble on windows )
-  * Locate murmur.exe in the folder.
+* Make Murmur start with your PC.
+  * Go to the Mumble installation folder. (Default is C:\Program Files\Mumble on Windows)
+  * Locate Murmur.exe in the folder.
   * Right-click it.
   * Select create shortcut.
-  * Answer yes to the prompt. ( it creates the shortcut on desktop instead of folder as you don't have the permissions )
-  * Now press windows key + r.
-  * Type in %appdata%\Microsoft\Windows\Start Menu\Programs\Startup ( this opens a folder in which you can put shortcuts the will be executed upon loging on )
-  * Next drag the murmur shortcut from desktop into the folder.
-  * Congrats! murmur starts with PC!
+  * Answer yes to the prompt. (It creates the shortcut on the desktop instead of folders as you don't have the permissions)
+  * Now press Windows key + R.
+  * Type in ```%appdata%\Microsoft\Windows\Start Menu\Programs\Startup``` (This opens a folder in which you can put shortcuts that will be executed upon logging on).
+  * Next, drag the Murmur shortcut from your desktop into the folder.
+  * Congrats! Murmur now starts with your PC!
 * Grab the host's internal IP.
-  * Press windows key + r.
-  * type in cmd. ( this opens a terminal )
-  * type ipconfig.
-  * press enter.
-  * Write down the IPv4 Adress. ( this will be important later )
+  * Press Windows key + R.
+  * Type in ```cmd```. 
+  * Press enter. (This opens a DOS-like terminal.)
+  * Type ```ipconfig```.
+  * Press enter.
+  * Write down the IPv4 Address. (This will be important later)
+
     ![cmd_ipconfig](https://user-images.githubusercontent.com/11398266/118362915-d3828900-b55f-11eb-971b-f71f032a66b3.png)
-
-
 -----
 # Setup Mumble ( host )
 
-* Download VBCable from [their site](https://vb-audio.com/Cable/).
-* Install it. [[Guide](https://www.howtogeek.com/364369/how-to-record-your-pcs-audio-with-vb-cable/), Don't do the listen part.]
-* Run mumble client and set it up without push to talk, minimal noise gate (so it doesn't permanently transmit) and for it to have its sound output on vbcable.
-* When you launch it will ask you to which server you wish to connect.
-  * click on add new.
-  * In the address field, type 127.0.0.1
-  * Type a name in the username field ( I use serv )
-  * In the Label field, type a nickname for it. ( mine is racc's comms )
+* Download VBCable from [their site] (https://vb-audio.com/Cable/).
+* Install it. [[Guide](https://www.howtogeek.com/364369/how-to-record-your-pcs-audio-with-vb-cable/), Don't do the listening part.]
+* Run Mumble client and set it up.
+  * You want it to have its sound output on VBCable.
+  * I recommend without push to talk, minimal noise gate (so it doesn't permanently transmit)
+* When you launch it, it will ask you to which server you want to connect.
+  * Click on add new.
+  * In the address field, type ```127.0.0.1```.
+  * In the username field type a name. This will be the host's name in the voice channel. ( I use ```serv``` here )
+  * In the Label field, type a nickname for it. ( mine is ```racc's comms``` )
 * Add auto-connect.
   * Click on Configure at the top of the main window.
   * Select settings.
   * Go to the Network tab.
   * Tick the "Reconnect to last server on startup".
 * Make it start with PC.
-  *  Press windows key + r.
-  *  Type in %appdata%\Microsoft\Windows\Start Menu\Programs\Startup ( this opens a folder in which you can put shortcuts the will be executed upon loging on ).
-  *  Next copy the Mumble shortcut from desktop into the folder.
-  *  Congrats Mumble starts with PC!
+  * Press Windows key + R.
+  * Type in ```%appdata%\Microsoft\Windows\Start Menu\Programs\Startup``` (This opens a folder in which you can put shortcuts that will be executed upon logging on).
+  * Next, copy the Mumble shortcut from your desktop into the folder.
+  * Congrats Mumble starts with your PC!
 -----
 
 # Setup Mumble ( client )
 
-* Download Mumble from [their site](https://www.mumble.info/).
-* Run the installer. But don't enable murmur.
-* Run mumble, set it up. Don't enable push to talk. Just do voice activated with noise gate. ( push to talk will be setup in-game as if you were on that pc. )
-* When you launch it will ask you to which server you wish to connect.
+* Download Mumble from [their site](https://www.Mumble.info/).
+* Run the installer. But don't enable Murmur.
+* Run Mumble, set it up.
+  * Don't enable push to talk. It becomes a hassle when you play games with different push to talk configurations. 
+    * Push to talk should be setup in-game as if you were on that PC.
+  *  Make it voice activated with a noise gate. 
+* When you launch it, it will ask you to which server you want to connect.
   * click on add new.
-  * In the address field, type the IPv4 you wrote down during murmur setup. ( mine would be 192.168.1.20 )
-  * Type a name in the username field ( I use client1 etc. )
-  * In the Label field, type a nickname for it. ( mine is racc's comms )
+  * In the address field, type ```127.0.0.1```.
+  * In the username field type a name. This will be the host's name in the voice channel. ( I use ```serv``` here. )
+  * In the Label field, type a nickname for it. ( mine is ```racc's comms``` )
 * Add auto-connect.
   * Click on Configure at the top of the main window.
   * Select settings.
@@ -93,6 +99,4 @@ That means the server side is up and running.
   * Tick the "Reconnect to last server on startup".
 -----
 
-This is how I achieved mic forwarding using mumble's software.
-
-This can be adapted to work throught WAN but I've never had to do it.
+This is how I achieved LAN mic forwarding using Mumble's software.
